@@ -2,11 +2,10 @@
   <div class="question-detail">
     <mt-header :title=title
                class="header">
-      <router-link to slot="left">
-        <mt-button icon="back"
-                   @click.native="$router.go(-1)">
-        </mt-button>
-      </router-link>
+      <mt-button icon="back"
+                 slot="left"
+                 @click.native="$router.go(-1)">
+      </mt-button>
     </mt-header>
     <div class="qa-content">
       <div class="qa-left">
@@ -60,10 +59,8 @@ export default {
     this.teacher = this.data_info.teachers;
     this.show_teacher = this.data_info.question_status == 1 ? true : false;
   },
-  created() {
-  },
-  methods: {
-  },
+  created() {},
+  methods: {},
 };
 </script>
 <style lang="css" scoped>
@@ -91,7 +88,7 @@ export default {
 }
 .qa-right hr {
   width: 100%;
-  background: #E1E1E1;
+  background: #e1e1e1;
   margin: 5px 0;
   height: 1px;
   border: 0;

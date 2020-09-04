@@ -3,12 +3,10 @@
     <div class="fixed-div">
       <mt-header :title=title
                  class="header">
-        <router-link to
-                     slot="left">
-          <mt-button icon="back">
-                     <!-- @click.native="$router.go(-1)"> -->
-          </mt-button>
-        </router-link>
+        <mt-button icon="back"
+                   slot="left"
+                   @click.native="$router.go(-1)">
+        </mt-button>
         <mt-button v-show="canFinish"
                    class="nav-right-btn"
                    slot="right"
@@ -51,8 +49,7 @@ export default {
     this.course_info = courseData;
     this.canFinish = courseData.type_id == 2 ? true : false;
   },
-  mounted() {
-  },
+  mounted() {},
   methods: {
     finished() {
       MessageBox.confirm(

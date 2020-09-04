@@ -2,12 +2,10 @@
   <div class="answer-question">
     <mt-header :title=title
                class="header">
-      <router-link to
-                   slot="left">
-        <mt-button icon="back"
-                   @click.native="$router.back(-1)">
-        </mt-button>
-      </router-link>
+      <mt-button icon="back"
+                 slot="left"
+                 @click.native="$router.go(-1)">
+      </mt-button>
       <router-link to
                    slot="right">
         <mt-button :class="class_confirm"
@@ -42,7 +40,7 @@ export default {
     this.question = this.$route.query;
     this.title = '向' + this.question.user.user_nickname + '回答';
     if (!this.question || this.title.length <= 0) {
-      this.$router.push()
+      this.$router.push();
     }
   },
   created() {},
@@ -69,10 +67,10 @@ export default {
       this.textLength = text.value.length + '/300';
       if (text.value.length > 0) {
         this.class_confirm = 'confirm-btn2';
-      }else{
+      } else {
         this.class_confirm = 'confirm-btn1';
       }
-    }
+    },
   },
 };
 </script>
@@ -83,7 +81,7 @@ export default {
   height: 100%;
 }
 .confirm-btn1 {
-  color: #FFC4C5;
+  color: #ffc4c5;
 }
 .confirm-btn2 {
   color: #e3191a;

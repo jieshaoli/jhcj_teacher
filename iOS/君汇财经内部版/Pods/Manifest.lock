@@ -1,0 +1,22 @@
+PODS:
+  - Masonry (1.1.0)
+  - PLMediaStreamingKit (3.0.2):
+    - PLMediaStreamingKit/iphoneos (= 3.0.2)
+  - PLMediaStreamingKit/iphoneos (3.0.2)
+
+DEPENDENCIES:
+  - Masonry
+  - PLMediaStreamingKit
+
+SPEC REPOS:
+  trunk:
+    - Masonry
+    - PLMediaStreamingKit
+
+SPEC CHECKSUMS:
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  PLMediaStreamingKit: 20e0dac77a93e488c8b06bfabf8fdb0fc61f07b5
+
+PODFILE CHECKSUM: cc3745dd803ba48f2aa8b4fe6ac0411c3be3ba93
+
+COCOAPODS: 1.10.0
